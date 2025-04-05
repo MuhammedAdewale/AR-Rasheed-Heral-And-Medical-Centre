@@ -34,7 +34,7 @@ a:hover::after{
     padding: -2px;
 }
 
-                                         /* animation */
+                                         /* Animations*/
 
 .item {
     opacity: 0;
@@ -45,4 +45,46 @@ a:hover::after{
   .item.show {
     opacity: 1;
     transform: translateY(0);
+  }
+  footer{
+    border-top: 1px solid whitesmoke;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  span{
+    background: linear-gradient(#0C75AF,#0C75AF);
+    background-repeat: no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-size: 0%;
+  }
+  span:first-child{
+    animation: textcolor1 7s linear infinite alternate ;
+  }
+  span:last-child{
+    animation: textcolor2 7s linear infinite alternate ;
+  }
+  @keyframes textcolor1 {
+    0%{
+        background-size: 0%;
+    }
+    40%{
+        background-size: 100%;
+    }
+    100%{
+        background-size: 100%;
+    }
+  }
+  @keyframes textcolor2 {
+    0%{
+        background-size: 0%;
+    }
+    40%{
+        background-size: 0%;
+    }
+    100%{
+        background-size: 100%;
+    }
   }
