@@ -68,21 +68,23 @@
             </div>
 
             <div style="display: flex; padding-top: 25px; justify-content: space-evenly; flex-wrap: wrap;">
-                <div style="padding-bottom: 20px;" ><img src="images/images.jpg" alt="" width="253px" height="300px"
+
+                <div style="padding-bottom: 20px;" class="item">
+                    <img src="images/images.jpg" alt="" width="253px" height="300px"
                         style="border-radius: 30px;"></div>
 
-                <div style="padding-bottom: 25px;"><img src="images/img.webp" alt="" width="253px" height="300px"
+                <div style="padding-bottom: 25px;" class="item"><img src="images/img.webp" alt="" width="253px" height="300px"
                         style="border-radius: 30px;"></div>
 
-                <div style="padding-bottom:25px;">
+                <div style="padding-bottom:25px;" class="item">
                     <img src="images/images (1).jpg" alt="" width="253px" height="300px" style="border-radius: 30px;">
                 </div>
 
-                <div style="padding-bottom: 25px;">
+                <div style="padding-bottom: 25px;" class="item">
                     <img src="images/med.webp" alt="" width="253px" height="300px" style="border-radius: 30px;">
                 </div>
 
-                <div style="padding-bottom: 25px;">
+                <div style="padding-bottom: 25px;" class="item">
                     <img src="images/prophetic-medicine.jpg" alt="" style="border-radius: 30px;" width="253px"
                         height="300px">
                 </div>
@@ -95,5 +97,22 @@
     </section>
     <!-- </section> -->
 </body>
+<script>
+    const items = document.querySelectorAll('.item');
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.8,
+});
+
+items.forEach((item) => {
+  observer.observe(item);
+});
+
+</script>
 </html>
