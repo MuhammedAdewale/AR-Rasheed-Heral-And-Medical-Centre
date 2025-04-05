@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+}
+.opacity{
+    background-color: black;
+    opacity: 0.8;
+}
+section{
+    background-image:url(images/preview16.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    transition: 0.9s;
+    border-bottom: 2px solid #0C75AF;
+}
+a:hover::after{
+    width: 100%;
+}
