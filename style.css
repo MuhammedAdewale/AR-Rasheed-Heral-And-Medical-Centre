@@ -61,10 +61,10 @@ a:hover::after{
     background-size: 0%;
   }
   span:first-child{
-    animation: textcolor1 7s linear infinite alternate ;
+    animation: textcolor1 9s linear infinite alternate ;
   }
   span:last-child{
-    animation: textcolor2 7s linear infinite alternate ;
+    animation: textcolor2 9s linear infinite alternate ;
   }
   @keyframes textcolor1 {
     0%{
@@ -78,11 +78,11 @@ a:hover::after{
     }
   }
   @keyframes textcolor2 {
-    0%{
+    100%{
         background-size: 0%;
     }
     40%{
-        background-size: 0%;
+        background-size: 100%;
     }
     100%{
         background-size: 100%;
